@@ -118,3 +118,11 @@ module.exports = {
     },
 }
 ```
+
+## eslint
+
+parser
+
+```bash
+pnpm i -D @typescript-eslint/parser@latest
+```
