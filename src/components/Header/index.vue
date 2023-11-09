@@ -7,7 +7,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../../variables.scss";
 .header {
-  color: red;
+  color: $theme-color;
 }
 </style>
