@@ -43,9 +43,17 @@ declare module "*.vue" {
 npm install--save-dev @types/node
 ```
 
+### error TS6504
+
+> error TS6504: File 'src/components/Header/index.vue.js' is a JavaScript file. Did you mean to enable the 'allowJs' option? The file is in the program because: Root file specified for compilation
+
+`<script></script>` 指定 lang="ts" 即可
+
 ## UnoCSS
+
 <!-- official website hyperlink -->
 [UnoCSS](https://unocss.dev/integrations/vite)
+
 ```bash
 pnpm add -D unocss
 ```
