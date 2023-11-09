@@ -21,7 +21,9 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 </details>
 
-## 找不到 vue 的宣告檔案
+## errors
+
+### 找不到 vue 的宣告檔案
 
 ```JS
 // src/types/vue-shim.d.ts
@@ -33,4 +35,10 @@ declare module "*.vue" {
     const component: DefineComponent < {}, {}, any >
         export default component
 }
+```
+
+### 找不到模組 'path' 或其對應的型別宣告
+
+```bash
+npm install--save-dev @types/node
 ```
