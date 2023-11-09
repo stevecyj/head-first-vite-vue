@@ -42,3 +42,69 @@ declare module "*.vue" {
 ```bash
 npm install--save-dev @types/node
 ```
+
+## UnoCSS
+
+```bash
+pnpm add -D unocss
+```
+
+```bash
+pnpm add -D @unocss/postcss
+```
+
+```JS
+// main.ts
+import {
+    createApp
+} from 'vue'
+import App from './App.vue'
+import './style.css'
+
+createApp(App).mount('#app')
+```
+
+```css
+/* style.css */
+@unocss all;
+```
+
+```JS
+// uno.config.ts
+import {
+    defineConfig,
+    presetAttributify,
+    presetIcons,
+    presetTypography,
+    presetUno,
+    presetWebFonts,
+} from 'unocss'
+
+export default defineConfig({
+    presets: [
+        presetUno({
+            attributifyPseudo: true,
+        }),
+        presetAttributify(),
+        presetIcons({
+            scale: 1.2,
+        }),
+        presetTypography(),
+        presetWebFonts({
+            provider: 'none',
+            fonts: {
+                script: 'Homemade Apple',
+            },
+        }),
+    ],
+})
+```
+
+```JS
+// postcss.config.cjs
+module.exports = {
+    plugins: {
+        '@unocss/postcss': {},
+    },
+}
+```
