@@ -51,6 +51,7 @@ npm install--save-dev @types/node
 
 ## UnoCSS
 
+**注意: Vite 配置文件中如果有 PostCSS 配置的情况下会覆盖掉 post.config.js 的内容!**
 <!-- official website hyperlink -->
 [UnoCSS](https://unocss.dev/integrations/vite)
 
