@@ -49,6 +49,29 @@ npm install--save-dev @types/node
 
 `<script></script>` 指定 lang="ts" 即可
 
+### .eslintrc.cjs error
+
+> Parsing error: ESLint was configured to run on <tsconfigRootDir>/.eslintrc.cjs using parserOptions.project
+
+```JS
+// tsconfig.json
+"include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    ".eslintrc.cjs",
+    "vite.config.ts"
+],
+```
+
+```JS
+// .eslintrc.cjs
+parserOptions: {
+    project: ['tsconfig.json', 'tsconfig.node.json'],
+},
+```
+
 ## UnoCSS
 
 **注意: Vite 配置文件中如果有 PostCSS 配置的情况下会覆盖掉 post.config.js 的内容!**
