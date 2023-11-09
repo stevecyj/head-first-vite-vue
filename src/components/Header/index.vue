@@ -9,5 +9,6 @@
 <style lang="scss" scoped>
 .header {
   color: $theme-color;
+  text-decoration: dashed;
 }
 </style>
