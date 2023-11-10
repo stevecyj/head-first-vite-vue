@@ -32,6 +32,7 @@ module.exports = {
     extraFileExtensions: [".vue"]
   },
   plugins: ["vue", "@typescript-eslint", "prettier"],
+  ignorePatterns: ["temp.js", "**/vendor/*.js", "**/*.d.ts"],
   rules: {
     "prettier/prettier": "error",
     quotes: ["error", "double"],
