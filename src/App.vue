@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Header from './components/Header/index.vue'
-import Uno from './components/Uno/index.vue'
+import Header from "./components/Header/HeaderIndex.vue";
+import Uno from "./components/Uno/UnoIndex.vue";
 </script>
 
 <template>
