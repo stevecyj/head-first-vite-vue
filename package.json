@@ -10,6 +10,7 @@
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src"
   },
   "dependencies": {
+    "create-stylelint": "0.3.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
