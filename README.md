@@ -72,6 +72,19 @@ parserOptions: {
 },
 ```
 
+### vue3开启eslint之后报错：error Parsing error: ‘＞‘ expected
+
+```JS
+{
+    // original config
+    parser: "vue-eslint-parser",
+    parserOptions: {
+        parser: "@typescript-eslint/parser",
+        // original
+    },
+}
+```
+
 ## UnoCSS
 
 **注意: Vite 配置文件中如果有 PostCSS 配置的情况下会覆盖掉 post.config.js 的内容!**
