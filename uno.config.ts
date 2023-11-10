@@ -5,24 +5,24 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
-  presetWebFonts,
+  presetWebFonts
 } from "unocss";
 
 export default defineConfig({
   presets: [
     presetUno({
-      attributifyPseudo: true,
+      attributifyPseudo: true
     }),
     presetAttributify(),
     presetIcons({
-      scale: 1.2,
+      scale: 1.2
     }),
     presetTypography(),
     presetWebFonts({
       provider: "none",
       fonts: {
-        script: "Homemade Apple",
-      },
-    }),
-  ],
+        script: "Homemade Apple"
+      }
+    })
+  ]
 });

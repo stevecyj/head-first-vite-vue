@@ -26,7 +26,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     ".eslintrc.cjs",
-    "vite.config.ts"
+    "vite.config.ts",
+    "postcss.config.cjs"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
