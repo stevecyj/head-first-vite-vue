@@ -91,6 +91,9 @@ devDependencies:
   vite-plugin-eslint:
     specifier: ^1.8.1
     version: 1.8.1(eslint@8.53.0)(vite@4.5.0)
+  vite-plugin-stylelint:
+    specifier: ^5.2.0
+    version: 5.2.0(postcss@8.4.31)(stylelint@15.11.0)(vite@4.5.0)
   vue-tsc:
     specifier: ^1.8.5
     version: 1.8.22(typescript@5.2.2)
@@ -3981,6 +3984,33 @@ packages:
       eslint: 8.53.0
       rollup: 2.79.1
       vite: 4.5.0(@types/node@20.9.0)(sass@1.69.5)
+    dev: true
+
+  /vite-plugin-stylelint@5.2.0(postcss@8.4.31)(stylelint@15.11.0)(vite@4.5.0):
+    resolution: {integrity: sha512-Qv5i7v3DqtICuAGApkHAjf0KfUESp6U47W8LcMVZLywiaE4iT9bH8SMdzhaklJ21ejKl8satnj6znbvr8xJ23Q==}
+    engines: {node: '>=14.18'}
+    peerDependencies:
+      '@types/stylelint': ^13.0.0
+      postcss: ^7.0.0 || ^8.0.0
+      rollup: ^2.0.0 || ^3.0.0 || ^4.0.0
+      stylelint: ^13.0.0 || ^14.0.0 || ^15.0.0
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || 5.0.0-0
+    peerDependenciesMeta:
+      '@types/stylelint':
+        optional: true
+      postcss:
+        optional: true
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.5
+      chokidar: 3.5.3
+      debug: 4.3.4
+      postcss: 8.4.31
+      stylelint: 15.11.0(typescript@5.2.2)
+      vite: 4.5.0(@types/node@20.9.0)(sass@1.69.5)
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /vite@4.5.0(@types/node@20.9.0)(sass@1.69.5):
