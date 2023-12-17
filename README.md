@@ -20,6 +20,7 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    2. Find `TypeScript and JavaScript Language Features` , right click and select `Disable (Workspace)`
 
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
 </details>
 
 ## errors
@@ -93,6 +94,36 @@ parserOptions: {
     },
 }
 ```
+
+### CssSyntaxError
+
+![CssSyntaxError](./img-read/css-syntax-error.png)
+
+> [vite] Internal server error:
+src/components/Uno/UnoIndex.vue
+ 15:1  ✖  Unknown word  CssSyntaxError
+
+* 原因：Stylelint是14版本不兼容vue3，Stylelint降级到13版本
+* <https://github.com/torchbox/stylelint-config-torchbox/issues/30>
+
+```js
+// .stylelintrc.cjs
+module.exports = {
+    // See https://github.com/torchbox/stylelint-config-torchbox for rules.
+    extends: 'stylelint-config-torchbox',
+    overrides: [
+        {
+             // Ensure Vue files aren't treated solely as html or scss
+            files: ["*.vue"],
+            customSyntax: "postcss-html"
+        },
+    ],
+};
+```
+
+and install/add `postcss-html` to our dev-dependencies, the error goes away.
+
+Although the error started appearing after the v14 update, it is still present at `stylelint` v15 and the latest `stylelint-config-torchbox` versions.
 
 ## UnoCSS
 
