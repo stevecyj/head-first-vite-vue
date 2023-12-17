@@ -24,5 +24,12 @@ module.exports = {
         ignoreAtRules: ["unocss"]
       }
     ]
-  }
+  },
+  overrides: [
+    {
+         // Ensure Vue files aren't treated solely as html or scss
+        files: ["*.vue"],
+        customSyntax: "postcss-html"
+    },
+],
 };
