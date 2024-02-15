@@ -97,7 +97,7 @@ parserOptions: {
 
 ### CssSyntaxError
 
-![CssSyntaxError](./img-read/css-syntax-error.png)
+![CssSyntaxError](./imgDoc/css-syntax-error.png)
 
 > [vite] Internal server error:
 src/components/Uno/UnoIndex.vue
